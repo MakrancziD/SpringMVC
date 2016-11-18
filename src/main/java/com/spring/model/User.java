@@ -5,15 +5,22 @@ import com.spring.model.enums.Color;
 import com.spring.model.enums.Gender;
 import com.spring.model.enums.School;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.StringJoiner;
 
 @SuppressWarnings("Since15")
 public class User
 {
+    @NotNull
+    @Size(min=2, max=20)
     private String name;
+    @NotNull
     private School school;
+    @NotNull
     private String gender;
+    @Size(min=1, max=4)
     private List<Color> colors;
 
     public String getName() {
