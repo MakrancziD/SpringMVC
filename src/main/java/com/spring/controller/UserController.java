@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserManager um;
 
-    @RequestMapping(value = "/listUsers")
+    @RequestMapping(value = "/admin/listUsers")
     public String listUsers() {
         return "listUsers";
     }
